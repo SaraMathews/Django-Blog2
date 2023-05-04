@@ -34,6 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "django-blog-lms.herokuapp.com",
     "8000-saramathews-django-blog2-aao7ug48s4.us2.codeanyapp.com",
+    "localhost",
 ]
 
 
