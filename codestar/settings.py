@@ -32,6 +32,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
 ALLOWED_HOSTS = [
     "django-blog-lms.herokuapp.com",
     "8000-saramathews-django-blog2-aao7ug48s4.us2.codeanyapp.com",
@@ -46,12 +48,21 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
     "cloudinary_storage",
     "django.contrib.staticfiles",
     "cloudinary",
     "django_summernote",
     "blog",
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
